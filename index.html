@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N'en Faire Qu'à Sa Tête — Salon de coiffure à La Seyne-sur-Mer</title>
+<meta name="description" content="Salon de coiffure mixte à La Seyne-sur-Mer. Coupe femme, homme et enfant, coloration, chignon de mariage, soins Redken. 4,9/5 avec 197 avis. Prenez rendez-vous.">
+<style>
+:root{
+  --sauge:#8FA98F;
+  --sauge-fonce:#5F7A61;
+  --sauge-clair:#D8E2D5;
+  --creme:#FAF6EE;
+  --creme-2:#F3ECDD;
+  --noir:#20241F;
+  --gris:#5C6058;
+  --blanc:#FFFFFF;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:Georgia,'Times New Roman',serif;
+  background:var(--creme);
+  color:var(--noir);
+  line-height:1.65;
+  font-size:17px;
+}
+h1,h2,h3{font-weight:normal;}
+h2{
+  font-size:2rem;
+  letter-spacing:.5px;
+  margin-bottom:.5rem;
+}
+.surtitre{
+  display:block;
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:.78rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--sauge-fonce);
+  margin-bottom:.8rem;
+}
+.conteneur{max-width:1080px;margin:0 auto;padding:0 24px;}
+section{padding:88px 0;}
+
+/* ---------- Navigation ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(250,246,238,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--sauge-clair);
+}
+.nav-inner{
+  max-width:1080px;margin:0 auto;padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+}
+.logo{
+  font-size:1.12rem;
+  color:var(--noir);
+  text-decoration:none;
+  white-space:nowrap;
+}
+.logo em{font-style:italic;color:var(--sauge-fonce);}
+.liens-nav{
+  display:flex;gap:26px;
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:.85rem;
+}
+.liens-nav a{color:var(--gris);text-decoration:none;transition:color .2s;}
+.liens-nav a:hover{color:var(--sauge-fonce);}
+.btn-nav{
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  background:var(--sauge-fonce);color:var(--blanc);
+  padding:10px 20px;border-radius:999px;
+  text-decoration:none;font-size:.85rem;letter-spacing:.5px;
+  white-space:nowrap;transition:background .2s;
+}
+.btn-nav:hover{background:var(--noir);}
+@media(max-width:760px){
+  .liens-nav{display:none;}
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:
+    radial-gradient(ellipse at 85% 15%, rgba(216,226,213,.9) 0%, rgba(250,246,238,0) 55%),
+    radial-gradient(ellipse at 10% 90%, rgba(143,169,143,.35) 0%, rgba(250,246,238,0) 50%),
+    var(--creme);
+  padding:110px 0 100px;
+  text-align:center;
+}
+.badge-note{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:.85rem;letter-spacing:1px;
+  background:var(--blanc);
+  border:1px solid var(--sauge-clair);
+  border-radius:999px;
+  padding:9px 20px;
+  color:var(--gris);
+  box-shadow:0 2px 10px rgba(32,36,31,.05);
+}
+.etoiles{color:#C8A24B;letter-spacing:2px;font-size:.95rem;}
+.hero h1{
+  font-size:3.4rem;
+  line-height:1.15;
+  margin:28px auto 18px;
+  max-width:820px;
+}
+.hero h1 em{font-style:italic;color:var(--sauge-fonce);}
+.hero p.accroche{
+  font-size:1.15rem;
+  color:var(--gris);
+  max-width:620px;
+  margin:0 auto 34px;
+}
+.btn-hero{
+  display:inline-block;
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  background:var(--sauge-fonce);
+  color:var(--blanc);
+  padding:16px 42px;
+  border-radius:999px;
+  text-decoration:none;
+  font-size:1rem;letter-spacing:1px;
+  box-shadow:0 8px 24px rgba(95,122,97,.35);
+  transition:transform .2s, background .2s;
+}
+.btn-hero:hover{background:var(--noir);transform:translateY(-2px);}
+.confiance{
+  margin-top:46px;
+  display:flex;justify-content:center;gap:44px;flex-wrap:wrap;
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:.82rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gris);
+}
+.confiance span{display:flex;align-items:center;gap:8px;}
+.point{width:6px;height:6px;border-radius:50%;background:var(--sauge);}
+
+/* ---------- Prestations ---------- */
+.fond-carte{background:var(--creme-2);}
+.grille-presta{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  margin-top:48px;
+}
+.carte-presta{
+  background:var(--blanc);
+  border:1px solid var(--sauge-clair);
+  border-radius:18px;
+  padding:34px 30px;
+  transition:transform .25s, box-shadow .25s;
+}
+.carte-presta:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 34px rgba(32,36,31,.08);
+}
+.icone-presta{
+  width:52px;height:52px;
+  border-radius:14px;
+  background:var(--sauge-clair);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;
+  margin-bottom:20px;
+}
+.carte-presta h3{font-size:1.25rem;margin-bottom:10px;}
+.carte-presta p{font-size:.95rem;color:var(--gris);margin-bottom:18px;}
+.prix{
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:.85rem;letter-spacing:.5px;
+  color:var(--sauge-fonce);
+  border-top:1px dashed var(--sauge-clair);
+  padding-top:14px;
+}
+.prix strong{font-size:1.05rem;color:var(--noir);}
+.note-sup{
+  text-align:center;margin-top:34px;
+  font-size:.9rem;color:var(--gris);font-style:italic;
+}
+
+/* ---------- Le salon ---------- */
+.salon-grid{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:60px;
+  align-items:center;
+}
+@media(max-width:860px){
+  .salon-grid{grid-template-columns:1fr;gap:40px;}
+}
+.salon-grid p{color:var(--gris);margin-bottom:18px;}
+.salon-texte h2{margin-bottom:24px;}
+.atouts{list-style:none;margin-top:10px;}
+.atouts li{
+  padding:10px 0 10px 34px;
+  position:relative;
+  border-bottom:1px solid var(--sauge-clair);
+  font-size:.98rem;
+}
+.atouts li:last-child{border-bottom:none;}
+.atouts li::before{
+  content:"✓";
+  position:absolute;left:0;top:9px;
+  width:22px;height:22px;border-radius:50%;
+  background:var(--sauge);color:var(--blanc);
+  font-size:.75rem;display:flex;align-items:center;justify-content:center;
+}
+.cadre-ambiance{
+  background:linear-gradient(160deg,var(--sauge) 0%,var(--sauge-fonce) 100%);
+  border-radius:24px;
+  padding:52px 44px;
+  color:var(--blanc);
+  box-shadow:0 20px 50px rgba(95,122,97,.35);
+}
+.cadre-ambiance .verset{
+  font-size:1.5rem;line-height:1.4;font-style:italic;
+}
+.cadre-ambiance .signature{
+  margin-top:22px;
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:.8rem;letter-spacing:2px;text-transform:uppercase;
+  opacity:.85;
+}
+.mots-ambiance{
+  margin-top:34px;display:flex;flex-wrap:wrap;gap:10px;
+}
+.mots-ambiance span{
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:.75rem;letter-spacing:1px;
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:999px;padding:7px 14px;
+}
+
+/* ---------- Avis ---------- */
+.fond-sauge{background:var(--sauge-clair);}
+.grille-avis{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;margin-top:48px;
+}
+.carte-avis{
+  background:var(--blanc);
+  border-radius:18px;
+  padding:34px 30px;
+  border:1px solid rgba(143,169,143,.35);
+  display:flex;flex-direction:column;
+}
+.carte-avis .etoiles{font-size:1rem;margin-bottom:14px;}
+.carte-avis blockquote{
+  font-style:italic;font-size:1rem;flex:1;margin-bottom:20px;
+}
+.carte-avis figcaption{
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:.82rem;letter-spacing:1px;color:var(--gris);
+}
+.section-entete{max-width:640px;}
+.section-entete p{color:var(--gris);}
+
+/* ---------- Infos ---------- */
+.grille-infos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;margin-top:48px;
+}
+.carte-info{
+  background:var(--blanc);
+  border:1px solid var(--sauge-clair);
+  border-radius:18px;
+  padding:32px 30px;
+}
+.carte-info h3{
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:.8rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--sauge-fonce);margin-bottom:16px;
+}
+.carte-info p, .carte-info li{font-size:.98rem;color:var(--noir);}
+.carte-info ul{list-style:none;}
+.carte-info li{
+  display:flex;justify-content:space-between;gap:14px;
+  padding:7px 0;border-bottom:1px dashed var(--creme-2);
+}
+.carte-info li:last-child{border-bottom:none;}
+.jour{color:var(--gris);}
+.ferme{color:#B0532F;}
+.bandeau-rdv{
+  margin-top:56px;
+  background:var(--noir);
+  border-radius:24px;
+  padding:52px 40px;
+  text-align:center;
+  color:var(--creme);
+}
+.bandeau-rdv h3{font-size:1.7rem;margin-bottom:12px;}
+.bandeau-rdv p{color:#C9CDC5;margin-bottom:26px;}
+.btn-bandeau{
+  display:inline-block;
+  background:var(--sauge);
+  color:var(--noir);
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:1rem;letter-spacing:1px;
+  padding:15px 40px;border-radius:999px;
+  text-decoration:none;
+  transition:background .2s;
+}
+.btn-bandeau:hover{background:var(--creme);}
+
+/* ---------- Footer ---------- */
+footer{
+  background:var(--sauge-fonce);
+  color:var(--creme);
+  padding:56px 0 34px;
+  text-align:center;
+}
+footer .nom-footer{font-size:1.5rem;font-style:italic;margin-bottom:10px;}
+footer .tel-footer{
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:1.05rem;letter-spacing:2px;
+  color:var(--blanc);text-decoration:none;
+}
+footer .tel-footer:hover{text-decoration:underline;}
+footer .adresse-footer{
+  font-size:.92rem;opacity:.85;margin-top:14px;
+}
+footer .mentions{
+  margin-top:34px;padding-top:22px;
+  border-top:1px solid rgba(250,246,238,.25);
+  font-family:'Helvetica Neue',Arial,sans-serif;
+  font-size:.75rem;letter-spacing:1px;opacity:.7;
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="logo" href="#accueil">N'en Faire Qu'à <em>Sa Tête</em></a>
+    <div class="liens-nav">
+      <a href="#prestations">Prestations</a>
+      <a href="#salon">Le salon</a>
+      <a href="#avis">Avis</a>
+      <a href="#infos">Infos</a>
+    </div>
+    <a class="btn-nav" href="tel:TEL_HREF_ICI">Prendre RDV</a>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="accueil">
+  <div class="conteneur">
+    <span class="badge-note"><span class="etoiles">★★★★★</span> 4,9/5 — 197 avis clients</span>
+    <h1>Vos cheveux méritent qu'on <em>n'en fasse qu'à sa tête</em></h1>
+    <p class="accroche">Salon de coiffure mixte et visagiste à La Seyne-sur-Mer. Coupes affirmées, couleurs éclatantes, chignons de mariage&nbsp;: Mélissa donne vie à toutes vos envies capillaires.</p>
+    <a class="btn-hero" href="tel:TEL_HREF_ICI">Prendre RDV</a>
+    <div class="confiance">
+      <span><span class="point"></span>Coiffeuse visagiste</span>
+      <span><span class="point"></span>Produits Redken 5th Avenue</span>
+      <span><span class="point"></span>Massage shampoing inclus</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ PRESTATIONS ============ -->
+<section class="fond-carte" id="prestations">
+  <div class="conteneur">
+    <div class="section-entete">
+      <span class="surtitre">Prestations</span>
+      <h2>Des services pour chaque tête</h2>
+      <p>Du brushing du quotidien à la métamorphose complète, chaque prestation comprend le shampoing et le massage du crâne qui fait la réputation du salon.</p>
+    </div>
+    <div class="grille-presta">
+      <article class="carte-presta">
+        <div class="icone-presta">✂️</div>
+        <h3>Coupe femme</h3>
+        <p>Coupe et brushing personnalisés selon votre visage et votre style&nbsp;: garçonne, mi-longs ou longs, l'entretien comme le grand changement.</p>
+        <p class="prix">à partir de <strong>44&nbsp;€</strong></p>
+      </article>
+      <article class="carte-presta">
+        <div class="icone-presta">💈</div>
+        <h3>Coupe homme</h3>
+        <p>Shampoing, massage, coupe et coiffage&nbsp;: une coupe nette et précise, classique ou tendance, en une quarantaine de minutes.</p>
+        <p class="prix">à partir de <strong>25&nbsp;€</strong></p>
+      </article>
+      <article class="carte-presta">
+        <div class="icone-presta">🎨</div>
+        <h3>Couleur &amp; balayage</h3>
+        <p>Coloration complète, racines, gloss ou mèches, avec des produits Redken pour des cheveux forts, brillants et sains. Sur devis pour les balayages.</p>
+        <p class="prix">à partir de <strong>59&nbsp;€</strong></p>
+      </article>
+      <article class="carte-presta">
+        <div class="icone-presta">💍</div>
+        <h3>Chignon &amp; mariage</h3>
+        <p>Chignons et coiffures d'événement pour le jour J&nbsp;: élégance tenue toute la journée, essai possible avant le mariage.</p>
+        <p class="prix">sur <strong>rendez-vous</strong></p>
+      </article>
+      <article class="carte-presta">
+        <div class="icone-presta">🧒</div>
+        <h3>Enfants &amp; étudiants</h3>
+        <p>Coupes adaptées aux plus jeunes comme aux étudiants, dans un salon mixte où toute la famille trouve sa place.</p>
+        <p class="prix">à partir de <strong>13&nbsp;€</strong></p>
+      </article>
+      <article class="carte-presta">
+        <div class="icone-presta">🌿</div>
+        <h3>Soins profonds</h3>
+        <p>Soin Heatcure, soins Redken ABC et protocoles sur mesure pour réparer, nourrir et sublimer la matière.</p>
+        <p class="prix">à partir de <strong>7&nbsp;€</strong></p>
+      </article>
+    </div>
+    <p class="note-sup">Prestations complètes (coupe femme 44–58&nbsp;€, couleur forfaits 59–106&nbsp;€, balayages sur devis 100–200&nbsp;€)&nbsp;: devis gratuit en appelant le salon.</p>
+  </div>
+</section>
+
+<!-- ============ LE SALON ============ -->
+<section id="salon">
+  <div class="conteneur">
+    <div class="salon-grid">
+      <div class="salon-texte">
+        <span class="surtitre">Le salon</span>
+        <h2>Un cocon vert sauge, à l'entrée de la ville</h2>
+        <p>Juste à l'entrée de La Seyne-sur-Mer, le salon «&nbsp;N'en faire qu'à sa tête&nbsp;» a conquis une clientèle fidèle, féminine comme masculine, autour d'une idée simple&nbsp;: la coiffure doit d'abord vous faire plaisir.</p>
+        <p>Mélissa, coiffeuse visagiste, prend le temps d'écouter vos envies avant de sortir ses ciseaux. Décoration douce, ambiance chaleureuse, fauteuils confortables et miroirs lumineux&nbsp;: on s'y sent tout de suite bien.</p>
+        <ul class="atouts">
+          <li>Diagnostic et conseil personnalisés avant chaque service</li>
+          <li>Shampoing et massage du crâne inclus dans chaque prestation</li>
+          <li>Produits professionnels Redken 5th Avenue</li>
+          <li>Salon mixte&nbsp;: femmes, hommes et enfants bienvenus</li>
+        </ul>
+      </div>
+      <div class="cadre-ambiance">
+        <p class="verset">«&nbsp;Et si notre droit le plus élémentaire était de n'en faire qu'à notre tête&nbsp;?&nbsp;»</p>
+        <p class="signature">L'esprit du salon</p>
+        <div class="mots-ambiance">
+          <span>Visagiste</span>
+          <span>Sans rendez-vous possible</span>
+          <span>Étudiants bienvenus</span>
+          <span>Coiffure de mariage</span>
+          <span>Lissage &amp; permanente</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AVIS ============ -->
+<section class="fond-sauge" id="avis">
+  <div class="conteneur">
+    <div class="section-entete">
+      <span class="surtitre">Avis clients</span>
+      <h2>Ils ont osé, ils racontent</h2>
+      <p><strong>4,9/5 sur 197 avis</strong> — la parole aux clientes et clients du salon.</p>
+    </div>
+    <div class="grille-avis">
+      <figure class="carte-avis">
+        <div class="etoiles">★★★★★</div>
+        <blockquote>«&nbsp;Super salon&nbsp;! Écoute, conseils et un résultat au top à chaque fois. Le massage pendant le shampoing, c'est un vrai moment de détente. Je recommande les yeux fermés.&nbsp;»</blockquote>
+        <figcaption>Sandrine B.</figcaption>
+      </figure>
+      <figure class="carte-avis">
+        <div class="etoiles">★★★★★</div>
+        <blockquote>«&nbsp;Mélissa a réussi la transformation que je cherchais depuis des années&nbsp;: cheveux longs abandonnés pour une coupe courte ultra-stylée. Je n'ai jamais eu autant de compliments.&nbsp;»</blockquote>
+        <figcaption>Christelle M.</figcaption>
+      </figure>
+      <figure class="carte-avis">
+        <div class="etoiles">★★★★★</div>
+        <blockquote>«&nbsp;Coiffeuse visagiste, ça ne ment pas&nbsp;! Elle m'a trouvé la coupe et la couleur qui vont avec mon visage. Salon chaleureux, travaux soignés, prix honnêtes.&nbsp;»</blockquote>
+        <figcaption>Jean-Marc R.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFOS ============ -->
+<section id="infos">
+  <div class="conteneur">
+    <div class="section-entete">
+      <span class="surtitre">Infos pratiques</span>
+      <h2>Le salon en pratique</h2>
+      <p>Tout ce qu'il faut savoir avant de pousser la porte.</p>
+    </div>
+    <div class="grille-infos">
+      <div class="carte-info">
+        <h3>Adresse</h3>
+        <p>175 Avenue Max Barel<br>83500 La Seyne-sur-Mer</p>
+        <p style="margin-top:12px;">À l'entrée de la ville, côté caisse — parking facile à proximité.</p>
+      </div>
+      <div class="carte-info">
+        <h3>Horaires</h3>
+        <ul>
+          <li><span class="jour">Lundi</span><span class="ferme">Fermé</span></li>
+          <li><span class="jour">Mardi — Jeudi</span><span>9h – 18h</span></li>
+          <li><span class="jour">Vendredi</span><span>9h – 19h</span></li>
+          <li><span class="jour">Samedi</span><span>8h30 – 17h</span></li>
+          <li><span class="jour">Dimanche</span><span class="ferme">Fermé</span></li>
+        </ul>
+      </div>
+      <div class="carte-info">
+        <h3>Bon à savoir</h3>
+        <ul>
+          <li><span class="jour">Sans rendez-vous</span><span>selon dispo.</span></li>
+          <li><span class="jour">Tarif étudiant</span><span>oui</span></li>
+          <li><span class="jour">Balayages &amp; mèches</span><span>sur devis</span></li>
+          <li><span class="jour">Moyens de paiement</span><span>CB &amp; espèces</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bandeau-rdv">
+      <h3>Envie de changer de tête&nbsp;?</h3>
+      <p>Appelez le salon&nbsp;: on vous conseille et on trouve le créneau qui vous arrange.</p>
+      <a class="btn-bandeau" href="tel:TEL_HREF_ICI">Prendre RDV</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="conteneur">
+    <p class="nom-footer">N'en Faire Qu'à Sa Tête</p>
+    <a class="tel-footer" href="tel:TEL_HREF_ICI">TELPLACEHOLDER</a>
+    <p class="adresse-footer">175 Avenue Max Barel — 83500 La Seyne-sur-Mer<br>Fermé lundi et dimanche</p>
+    <p class="mentions">© 2026 N'en Faire Qu'à Sa Tête — Salon de coiffure mixte &amp; visagiste à La Seyne-sur-Mer (Var)</p>
+  </div>
+</footer>
+
+</body>
+</html>
