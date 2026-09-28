@@ -327,6 +327,15 @@ footer .mentions{
   font-family:'Helvetica Neue',Arial,sans-serif;
   font-size:.75rem;letter-spacing:1px;opacity:.7;
 }
+
+/* --- photos maquette (QA 28/09) --- */
+.ph-img{display:block;width:100%;height:100%;object-fit:cover}
+.ph-strip{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:34px auto 0;max-width:1080px}
+.ph-card{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 10px 30px rgba(10,20,40,.16)}
+.ph-cap{position:absolute;left:0;right:0;bottom:0;padding:10px 14px 12px;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.72) 60%);color:#fff;font-size:.92rem;letter-spacing:.4px}
+.icone-presta{overflow:hidden;border-radius:12px}
+.icone-presta img.ph-img{aspect-ratio:1/1}
+
 </style>
 </head>
 <body>
@@ -340,7 +349,7 @@ footer .mentions{
       <a href="#avis">Avis</a>
       <a href="#infos">Infos</a>
     </div>
-    <a class="btn-nav" href="tel:+33494874633">Prendre RDV</a>
+    <a class="btn-nav" href="tel:tel:+33494874633">Prendre RDV</a>
   </div>
 </nav>
 
@@ -350,7 +359,7 @@ footer .mentions{
     <span class="badge-note"><span class="etoiles">★★★★★</span> 4,9/5 — 197 avis clients</span>
     <h1>Vos cheveux méritent qu'on <em>n'en fasse qu'à sa tête</em></h1>
     <p class="accroche">Salon de coiffure mixte et visagiste à La Seyne-sur-Mer. Coupes affirmées, couleurs éclatantes, chignons de mariage&nbsp;: Mélissa donne vie à toutes vos envies capillaires.</p>
-    <a class="btn-hero" href="tel:+33494874633">Prendre RDV</a>
+    <a class="btn-hero" href="tel:tel:+33494874633">Prendre RDV</a>
     <div class="confiance">
       <span><span class="point"></span>Coiffeuse visagiste</span>
       <span><span class="point"></span>Produits Redken 5th Avenue</span>
@@ -360,6 +369,7 @@ footer .mentions{
 </header>
 
 <!-- ============ PRESTATIONS ============ -->
+<section class="ph-ambiance" style="background:var(--creme);padding:8px 6vw 46px;text-align:center"><div class="ph-strip" style="margin-top:0"><figure class="ph-card"><img class="ph-img" src="https://images.unsplash.com/photo-1633681926035-ec1ac984418a?auto=format&fit=crop&w=1100&q=80" alt="Intérieur du salon de coiffure" loading="lazy"><span class="ph-cap">Le salon</span></figure><figure class="ph-card"><img class="ph-img" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1100&q=80" alt="Coiffeuse sèche les cheveux d'une cliente" loading="lazy"><span class="ph-cap">Coiffage & soins</span></figure><figure class="ph-card"><img class="ph-img" src="https://images.unsplash.com/photo-1554519934-e32b1629d9ee?auto=format&fit=crop&w=1100&q=80" alt="Belle chevelure bouclée" loading="lazy"><span class="ph-cap">Résultat — boucles satinées</span></figure></div></section>
 <section class="fond-carte" id="prestations">
   <div class="conteneur">
     <div class="section-entete">
@@ -369,37 +379,37 @@ footer .mentions{
     </div>
     <div class="grille-presta">
       <article class="carte-presta">
-        <div class="icone-presta">✂️</div>
+        <div class="icone-presta"><img class="ph-img" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=300&q=75" alt="" loading="lazy">✂️</div>
         <h3>Coupe femme</h3>
         <p>Coupe et brushing personnalisés selon votre visage et votre style&nbsp;: garçonne, mi-longs ou longs, l'entretien comme le grand changement.</p>
         <p class="prix">à partir de <strong>44&nbsp;€</strong></p>
       </article>
       <article class="carte-presta">
-        <div class="icone-presta">💈</div>
+        <div class="icone-presta"><img class="ph-img" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=300&q=75" alt="" loading="lazy">💈</div>
         <h3>Coupe homme</h3>
         <p>Shampoing, massage, coupe et coiffage&nbsp;: une coupe nette et précise, classique ou tendance, en une quarantaine de minutes.</p>
         <p class="prix">à partir de <strong>25&nbsp;€</strong></p>
       </article>
       <article class="carte-presta">
-        <div class="icone-presta">🎨</div>
+        <div class="icone-presta"><img class="ph-img" src="https://images.unsplash.com/photo-1560869713-7d0a29430803?auto=format&fit=crop&w=300&q=75" alt="" loading="lazy">🎨</div>
         <h3>Couleur &amp; balayage</h3>
         <p>Coloration complète, racines, gloss ou mèches, avec des produits Redken pour des cheveux forts, brillants et sains. Sur devis pour les balayages.</p>
         <p class="prix">à partir de <strong>59&nbsp;€</strong></p>
       </article>
       <article class="carte-presta">
-        <div class="icone-presta">💍</div>
+        <div class="icone-presta"><img class="ph-img" src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?auto=format&fit=crop&w=300&q=75" alt="" loading="lazy">💍</div>
         <h3>Chignon &amp; mariage</h3>
         <p>Chignons et coiffures d'événement pour le jour J&nbsp;: élégance tenue toute la journée, essai possible avant le mariage.</p>
         <p class="prix">sur <strong>rendez-vous</strong></p>
       </article>
       <article class="carte-presta">
-        <div class="icone-presta">🧒</div>
+        <div class="icone-presta"><img class="ph-img" src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=300&q=75" alt="" loading="lazy">🧒</div>
         <h3>Enfants &amp; étudiants</h3>
         <p>Coupes adaptées aux plus jeunes comme aux étudiants, dans un salon mixte où toute la famille trouve sa place.</p>
         <p class="prix">à partir de <strong>13&nbsp;€</strong></p>
       </article>
       <article class="carte-presta">
-        <div class="icone-presta">🌿</div>
+        <div class="icone-presta"><img class="ph-img" src="https://images.unsplash.com/photo-1637777269327-c4d5c7944d7b?auto=format&fit=crop&w=300&q=75" alt="" loading="lazy">🌿</div>
         <h3>Soins profonds</h3>
         <p>Soin Heatcure, soins Redken ABC et protocoles sur mesure pour réparer, nourrir et sublimer la matière.</p>
         <p class="prix">à partir de <strong>7&nbsp;€</strong></p>
@@ -505,7 +515,7 @@ footer .mentions{
     <div class="bandeau-rdv">
       <h3>Envie de changer de tête&nbsp;?</h3>
       <p>Appelez le salon&nbsp;: on vous conseille et on trouve le créneau qui vous arrange.</p>
-      <a class="btn-bandeau" href="tel:+33494874633">Prendre RDV</a>
+      <a class="btn-bandeau" href="tel:tel:+33494874633">Prendre RDV</a>
     </div>
   </div>
 </section>
@@ -514,7 +524,7 @@ footer .mentions{
 <footer>
   <div class="conteneur">
     <p class="nom-footer">N'en Faire Qu'à Sa Tête</p>
-    <a class="tel-footer" href="tel:+33494874633">04 94 87 46 33</a>
+    <a class="tel-footer" href="tel:tel:+33494874633">04 94 87 46 33</a>
     <p class="adresse-footer">175 Avenue Max Barel — 83500 La Seyne-sur-Mer<br>Fermé lundi et dimanche</p>
     <p class="mentions">© 2026 N'en Faire Qu'à Sa Tête — Salon de coiffure mixte &amp; visagiste à La Seyne-sur-Mer (Var)</p>
   </div>
